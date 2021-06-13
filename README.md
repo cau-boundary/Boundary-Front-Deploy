@@ -1,12 +1,17 @@
-# Boundary Frontend
+<p align="center">
+<img src="https://user-images.githubusercontent.com/30883319/121801534-c77b0b80-cc72-11eb-8d72-193a9e24ee33.png">
+</p>
 
-<h1>사용법</h1>
-<pre>
-1.git clone repository_name
-2.git checkout develop
-3.npm install
-4.npm run dev
-5.root 디렉토리에 config.js 생성 후 아래와 같은 형식으로 작성
+# Boundary Frontend
+## 레포지토리 다운받기
+```bash
+git clone repository_name
+```
+
+## 레포지토리 세팅
+### ./config.js 세팅
+`./config.js`파일을 만들어 다음 내용에 맞게 설정
+```js
 const config = { iceServers: [{ urls: ["stun:stun.l.google.com:19302"] }] };
 module.exports = {
     peerConfig : {
@@ -26,30 +31,34 @@ module.exports = {
 		baseURL: "http://localhost:3000",
     }
 }
-</pre>
+```
+### mapbox api key 세팅
+[Mapbox](https://account.mapbox.com) 에서 발급받은 API Key를 `./src/components/page_index/bdmainmap.tsx`78번째 줄 mapbox_api_key에 삽입
+```js
+...
+map.current = new mapboxgl.Map({
+    accessToken: `mapbox_api_key`,
+    container: mapContainer.current,
+...
+```
 
+## 서버 실행
+### 기본 실행
 ```bash
-# 기존에 실행중인 서버가 있다면 종료하기
-pm2 delete boundary_front
-
-# 새로운 서버 시작
+npm run build
+npm run start
+```
+### pm2 사용시
+```bash
+#기존에 서버가 실행중이라면 중지시키고
 npm run build
 pm2 start npm --name "boundary_front" -- start
 ```
 
-<h1>코드 작성전 유의사항</h1>
-<pre>
-1. git flow 사용중
-2. develop 브랜치 확인
-3. git flow feature start "기능이름"
-4. git flow feature finish "기능이름"
-5. 단 develop 브랜치 pull은 주기적으로 할 것
-</pre>
-
-<h1>저장할때마다 코드 자동 prettieerc & eslintrc 적용하는 방법</h1>
-<pre>
-1. VS Code에서 settings.json파일을 들어간다(윈도우, 리눅스에서는 Ctrl + ,, 맥에서는 Cmd + , 를 누르고 오른쪽 위에 작은 문서 아이콘 누르면 settings.json 볼 수 있음)
-2. 아래 내용을 붙여넣기
+## 코드 컨벤션
+### prettieerc & eslintrc format on save 설정
+VSCode settings.json 파일 설정
+```json
 {
     // Set the default
     "editor.formatOnSave": false,
@@ -62,4 +71,10 @@ pm2 start npm --name "boundary_front" -- start
     "source.fixAll.eslint": true
     }
 }
-</pre>
+```
+### git branch 관리
+* git flow 사용하여 관리
+    * git flow feature start "기능이름"
+    * git flow feature finish "기능이름"
+    * 개발은 develop 브랜치에서 진행
+* develop 브랜치 pull은 주기적으로 할 것
