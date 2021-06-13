@@ -1,0 +1,72 @@
+.cell {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	height: 100%;
+}
+
+.image img {
+	display: block;
+	width: 49px;
+	height: 49px;
+	overflow: hidden;
+	object-fit: cover;
+	border-radius: 70%;
+	margin: auto 13px auto 24px;
+}
+
+.infos {
+	min-width: 0;
+	display: flex;
+	flex-flow: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.info_title {
+	min-width: 0;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 0 3px 0;
+	white-space: nowrap;
+}
+
+.info_participants {
+	min-width: 0;
+	font-size: 14px;
+	color: #a5a5a5;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: flex;
+}
+
+.info_participants_list {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.info_participants_others {
+	display: block;
+}
+
+.location {
+	width: 57px;
+	height: 100%;
+	margin: 17px 17px auto 17px;
+	flex-shrink: 0;
+	text-align: right;
+}
+
+.divline {
+	border: 0;
+	height: 0.5px;
+	background: #3c3c43;
+	opacity: 0.36;
+	margin: 0 0 0 29px;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Boundary - Location based communicating app",
+  "short_name": "Boundary",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/boundary.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Communicate with nearby people!",
+      "short_name": "Boundary",
+      "description": "Boundary - Location based communicating app",
+      "url": "/",
+      "icons": [{ "src": "/logo.png", "sizes": "256x256" }]
+    }
+  ],
+  "description": "Boundary - Location based communicating app",
+  "screenshots": [
+    {
+      "src": "/app/screenshot1.png",
+      "type": "image/png",
+      "sizes": "1170x2532"
+    }
+  ]
+}

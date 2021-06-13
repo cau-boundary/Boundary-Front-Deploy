@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="그룹_37" data-name="그룹 37" transform="translate(-5 -5)">
+    <rect id="사각형_5" data-name="사각형 5" width="24" height="24" transform="translate(5 5)" fill="none"/>
+    <g id="logout" transform="translate(7.562 6.744)">
+      <g id="그룹_41" data-name="그룹 41" transform="translate(0 0.85)">
+        <g id="그룹_40" data-name="그룹 40" transform="translate(0 0)">
+          <path id="패스_3" data-name="패스 3" d="M9.406,18.1H2.352a.784.784,0,0,1-.784-.784V3.2a.784.784,0,0,1,.784-.784H9.406a.784.784,0,0,0,0-1.568H2.352A2.355,2.355,0,0,0,0,3.2v14.11a2.354,2.354,0,0,0,2.352,2.352H9.406a.784.784,0,0,0,0-1.568Z" transform="translate(0 -0.85)" fill="#707070" stroke="#707070" stroke-width="0.5"/>
+        </g>
+      </g>
+      <g id="그룹_43" data-name="그룹 43" transform="translate(6.271 4.769)">
+        <g id="그룹_42" data-name="그룹 42">
+          <path id="패스_4" data-name="패스 4" d="M182.471,112.094l-4.766-4.7a.784.784,0,1,0-1.1,1.116l3.406,3.361h-9.127a.784.784,0,0,0,0,1.568h9.127L176.6,116.8a.784.784,0,1,0,1.1,1.116l4.766-4.7a.783.783,0,0,0,0-1.116Z" transform="translate(-170.1 -107.165)" fill="#707070" stroke="#707070" stroke-width="0.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

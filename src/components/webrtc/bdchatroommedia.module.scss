@@ -1,0 +1,12 @@
+.video {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 70%;
+	transform: scaleX(-1);
+	border: grey 3px solid;
+}
+
+.label {
+	text-align: center;
+}

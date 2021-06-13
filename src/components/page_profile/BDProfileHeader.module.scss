@@ -1,0 +1,301 @@
+.container {
+	max-width: 93.5em;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+
+.btn {
+	display: inline-block;
+	font: inherit;
+	background: none;
+	border: none;
+	color: inherit;
+	padding: 0;
+	cursor: pointer;
+	&:focus {
+		outline: 0.5em auto #4d90fe;
+	}
+}
+
+.visually_hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Profile Section */
+
+.profile {
+	padding: 3em 0;
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.profile_image {
+	position: relative;
+	float: left;
+	width: calc(33.333% - 1em);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 3em;
+	img {
+		border-radius: 50%;
+		width: 125px;
+		height: 125px;
+		object-fit: cover;
+	}
+	#profile_image_edit_btn {
+		display: none;
+	}
+	.profile_image_edit_btn_label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 125px;
+		height: 125px;
+		position: absolute;
+		background-color: rgb(255, 255, 255, 0.8);
+		border-radius: 50%;
+		box-shadow: 0px 3px 10px 3px gray;
+		img {
+			display: block;
+			width: 25%;
+			height: 25%;
+			border-radius: 0;
+		}
+	}
+}
+
+.profile_user_settings,
+.profile_stats,
+.profile_bio {
+	float: left;
+	width: calc(66.666% - 2em);
+}
+
+.profile_user_settings {
+	margin-top: 1.1em;
+}
+
+.profile_user_name {
+	display: inline-block;
+	font-size: 3.2em;
+	font-weight: 300;
+	margin: 0.5px 0 0.5px 0;
+}
+
+.profile_user_name_edit {
+	display: inline-block;
+	font-size: 3.2em;
+	font-weight: 300;
+	border: 0.5px 0 0.5px 0;
+	margin: 0;
+	padding: 0;
+}
+
+.profile_edit_btn {
+	font-size: 1.4em;
+	line-height: 1.8;
+	border: 0.1em solid #dbdbdb;
+	border-radius: 0.3em;
+	padding: 0 2.4em;
+	margin-left: 1em;
+}
+
+.profile_settings_btn {
+	font-size: 2em;
+	margin-left: 1em;
+}
+
+// 화면이 40em 보다 클때 적용됨
+.profile_stats {
+	margin-top: 2.3em;
+	ul {
+		padding-left: 0px;
+		li {
+			display: inline-block;
+			font-size: 1.6em;
+			line-height: 1.5;
+			margin-right: 2em;
+			cursor: pointer;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.profile_bio {
+	font-size: 1.6em;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 2.3em;
+}
+
+.profile_real_name,
+.profile_stat_count,
+.profile_edit_btn {
+	font-weight: 600;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 40em) {
+	.profile {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4em 0px;
+		&::after {
+			display: none;
+		}
+	}
+
+	.profile_image,
+	.profile_user_settings,
+	.profile_bio,
+	.profile_stats {
+		float: none;
+		width: auto;
+	}
+
+	.profile_image img {
+		width: 7.7em;
+		height: 7.7em;
+	}
+
+	.profile_image .profile_image_edit_btn_label {
+		width: 7.7em;
+		height: 7.7em;
+		img {
+			width: 40%;
+			height: 40%;
+		}
+	}
+
+	.profile_user_settings {
+		flex-basis: calc(100% - 10.7em);
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 1em;
+	}
+
+	.profile_user_name {
+		font-size: 2.2em;
+	}
+
+	.profile_user_name_edit {
+		font-size: 2.2em;
+	}
+
+	.profile_edit_btn {
+		order: 1;
+		padding: 0;
+		text-align: center;
+		margin-top: 1em;
+	}
+
+	.profile_edit_btn {
+		margin-left: 0;
+	}
+
+	.profile_bio {
+		font-size: 1.4em;
+		margin-top: 1.5em;
+	}
+
+	.profile_edit_btn,
+	.profile_bio,
+	.profile_stats {
+		flex-basis: 100%;
+	}
+
+	.profile_stats {
+		order: 1;
+		margin-top: 1.5em;
+	}
+
+	.profile_stats ul {
+		display: flex;
+		text-align: center;
+		padding: 1.2em 0;
+		border-top: 0.1em solid #dadada;
+		border-bottom: 0.1em solid #dadada;
+	}
+
+	.profile_stats li {
+		font-size: 1.4em;
+		flex: 1;
+		margin: 0;
+	}
+
+	.profile_stat_count {
+		display: block;
+	}
+}
+
+/*
+
+The following code will only run if your browser supports CSS grid.
+
+emove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
+
+*/
+
+@supports (display: grid) {
+	.profile {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: repeat(3, auto);
+		grid-column-gap: 1em;
+		align-items: center;
+	}
+
+	.profile_image {
+		grid-row: 1 / -1;
+	}
+
+	.profile_image,
+	.profile_user_settings,
+	.profile_stats,
+	.profile_bio {
+		width: auto;
+		margin: 0;
+	}
+
+	@media (max-width: 40em) {
+		.profile {
+			grid-template-columns: auto 1fr;
+			grid-row-gap: 1.5em;
+		}
+
+		.profile_image {
+			grid-row: 1 / 2;
+		}
+
+		.profile_user_settings {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-gap: 1em;
+		}
+
+		.profile_edit_btn,
+		.profile_stats,
+		.profile_bio {
+			grid-column: 1 / -1;
+		}
+
+		.profile_user_settings,
+		.profile_edit_btn,
+		.profile_settings_btn,
+		.profile_bio,
+		.profile_stats {
+			margin: 0;
+		}
+	}
+}

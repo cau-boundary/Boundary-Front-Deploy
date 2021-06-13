@@ -1,0 +1,54 @@
+.profile {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 1px 5px 1px gray;
+}
+
+.image img {
+	display: block;
+	width: 45px;
+	height: 45px;
+	overflow: hidden;
+	object-fit: cover;
+	border-radius: 70%;
+	margin: auto 13px;
+}
+
+.infos {
+	min-width: 0;
+	display: flex;
+	flex-flow: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.info_name {
+	min-width: 0;
+	font-size: 22px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.info_email {
+	min-width: 0;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.buttons > * {
+	width: 30px;
+	height: 30px;
+	margin: auto 15px;
+	display: flex;
+}
+
+.buttons_createroom {
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}

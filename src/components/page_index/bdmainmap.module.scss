@@ -1,0 +1,37 @@
+.map {
+	background: white;
+}
+
+.chatroom_pin {
+	border-radius: 70%;
+	object-fit: fill;
+	box-shadow: 0 0px 5px 1px grey;
+}
+
+.chatroom_popup {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 5px;
+
+	.chatroom_popup_info {
+		.chatroom_popup_title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.chatroom_popup_generator {
+			font-size: 12px;
+			color: gray;
+		}
+	}
+
+	.chatroom_popup_buttons {
+		padding: 0 0 0 10px;
+		.chatroom_popup_button_enter {
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
