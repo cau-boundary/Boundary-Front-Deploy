@@ -45,6 +45,7 @@ map.current = new mapboxgl.Map({
 ## 서버 실행
 ### 기본 실행
 ```bash
+npm install
 npm run build
 npm run start
 ```
